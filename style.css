@@ -1,0 +1,12 @@
+#title{
+    display: flex;
+    justify-content: center;
+}
+
+#game{
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 600px;
+    border: 1px solid black;
+}
