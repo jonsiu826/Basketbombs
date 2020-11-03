@@ -1,12 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 #title{
     display: flex;
     justify-content: center;
 }
 
 #game{
-    display: flex;
-    align-items: center;
+    margin: auto;
     width: 1200px;
     height: 600px;
     border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-screen, #introduction {
+  z-index: 998;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgba(0, 0, 0, .3);
+}
+
+#introduction-content {
+  z-index: 999;
+  position: fixed;
+  width: 60vw;
+  /* height: 80vh; */
+  top: 5vh;
+  left: 20vw;
+  padding: 50px;
+  background: white;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #3E3E3E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

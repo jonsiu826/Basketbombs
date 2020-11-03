@@ -1,0 +1,24 @@
+{
+  "name": "basketbombs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack-cli": "^4.1.0",
+    "webpack": "^5.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsiu826/javascript_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonsiu826/javascript_project/issues"
+  },
+  "homepage": "https://github.com/jonsiu826/javascript_project#readme"
+}
