@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -10,7 +59,7 @@
 
 #game{
     margin: auto;
-    width: 1200px;
+    width: 800px;
     height: 600px;
     border: 1px solid black;
 }
@@ -20,7 +69,7 @@
 }
 
 .modal-screen, #introduction {
-  z-index: 998;
+  z-index: 9;
   position: fixed;
   top: 0%;
   bottom: 0%;
@@ -29,22 +78,46 @@
   background: rgba(0, 0, 0, .3);
 }
 
+
 #introduction-content {
-  z-index: 999;
+  z-index: 10;
   position: fixed;
   width: 60vw;
-  /* height: 80vh; */
-  top: 5vh;
-  left: 20vw;
+  height: 20vh;
+  top: 10vh;
+  left: 17%;
   padding: 50px;
   background: white;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 18px;
   line-height: 28px;
-  color: #3E3E3E;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+ 
+#game-description {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+} 
+
+#basket{
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  top: 500px;
+}
+
+#basketball{
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 40px;
 }
