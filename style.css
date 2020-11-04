@@ -95,9 +95,18 @@ table {
   right: 0%;
   background: rgba(0, 0, 0, .3);
 }
+/* #modal{
+    z-index: 9;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgba(0, 0, 0, .3);
+} */
 
-#modal{
-    z-index: 999;
+#modal-content{
+  z-index: 11;
   position: fixed;
   background: white;
   border-radius: 10px;
@@ -271,8 +280,9 @@ table {
 }
 
 #score-title{
-  font-size: 30px;
+  font-size: 15px;
   padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #score-wrapper{
@@ -286,20 +296,22 @@ table {
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  
+  /* font-family: 'Press Start 2P', cursive; */
 }
 
 #high-score{
   display: flex;
   justify-content: center;
-  
+  font-family: 'Press Start 2P', cursive;
 }
 
 #score{
   display: flex;
   justify-content: center;
+  font-family: 'Press Start 2P', cursive;
 }
 #high-score-title{
-  font-size: 30px;
+  font-size: 15px;
   padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
 }
