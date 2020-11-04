@@ -56,13 +56,28 @@ table {
     display: flex;
     justify-content: center;
     font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
 }
 
 #game{
-    margin: auto;
+    margin: 37px 100px 0% 127px;
+    /* position: fixed; */
     width: 800px;
     height: 700px;
     border: 1px solid black;
+    background-color: wheat;
+}
+
+/* body{
+  background-color: rosybrown;
+} */
+
+#gameview{
+  display: flex;
+  background-image: url("assets/background-basketball-court.jpg");
+  padding-bottom: 85px;
 }
 
 .hidden {
@@ -111,7 +126,8 @@ table {
 #basket{
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-color: wheat;
+  content: url("assets/rim.png");
   position: relative;
   top: 500px;
 }
@@ -120,13 +136,105 @@ table {
     width: 100px;
     height: 100px;
     top: 600px;
-    background-color: orangered;
+    /* background-color: orangered; */
+    content: url("assets/basketball-image.png");
     border-radius: 65px;
     position: relative;
     animation: slide 2s infinite linear;
+    
+    /* animation-iteration-count: 1 */
     /* overflow: hidden; */
 }
+
 @keyframes slide{
     0%{top: 0px};
     100%{top:500px};
+    
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 120%;
+  height: 20%;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  /* margin: 2px 0; */
+   background-color: wheat;
+}
+
+#linkedin-logo{
+  height: 70px;
+  margin-left: 5px;
+}
+
+/* .links {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+} */
+
+#instructions-panel{
+  /* display: flex; */
+  border: 1px solid black;
+  margin: auto;
+  width: 120%;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+}
+
+#left-key{
+    height: 70px;
+    float: right;
+    padding-left: 25px;
+}
+
+#right-key{
+     height: 70px;
+     float: right;
+     padding-left: 15px;
+     padding-bottom: 20px;
+}
+
+#instructions{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 5% 10% 3% 30%;
+  left: 17%;
+  background-color: wheat;
+}
+
+
+#right-panel{
+  display: flex;
+  flex-direction: column;
+  padding: 62px 0px 0px 0px;
+  /* justify-content: space-around; */
+}
+
+#left-key-container{
+  display: flex;
+  flex-direction: row;
+   background-color: wheat;
+}
+
+#right-key-container{
+  display: flex;
+  flex-direction: row;
+   background-color: wheat;
+}
+
+#left-text{
+  padding: 30px 60px 0px 60px;
+}
+
+#right-text{
+  padding: 30px 60px 0px 60px;
 }

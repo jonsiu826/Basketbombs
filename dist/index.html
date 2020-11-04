@@ -4,38 +4,54 @@
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
-        <div id="introduction">
-            <div id="introduction-content">
-                <h1>Welcome to BasketBomb</h1>
-                <div id="game-description"> Items are falling from the sky! Be sure to catch all the items in your basket without letting
-                    them hit the ground. Beware of the bombs!
-                </div>
-                <div id="game-instruction">
+        <div id="gameview">
+       
+            <div id="introduction">
+                <div id="introduction-content">
+                    <h1>Welcome to BasketBomb</h1>
+                    <div id="game-description"> Items are falling from the sky! Be sure to catch all the items in your basket without letting
+                        them hit the ground. Beware of the bombs!
+                    </div>
+                    <div id="game-instruction">
 
+                    </div>
+                    <div>
+                        <button id="start-button">START GAME</button>
+                    </div>
+                </div>
+                <!-- <div id="game-over">
+                    <h1> Game Over</h1>
                 </div>
                 <div>
-                    <button id="start-button">START GAME</button>
+                    <button id="reset-button">RESTART GAME</button>
+                </div> -->
+            </div>
+            <div id="game">
+                <div id="basketball"></div>
+                <div id=counter></div>
+            <div id="basket"></div>
+        </div>
+            <div id="right-panel">
+                <div id="links">
+                    <a id="github" href="https://github.com/jonsiu826" target="_blank">
+                        <img id="github-logo" src="../assets/GitHub-Mark-64px.png" alt="github-icon">
+                    </a>
+                    <a id="linkedin" href="https://www.linkedin.com/in/jonathansiu826/" target="_blank">
+                        <img id="linkedin-logo" src="../assets/linkedin.png" alt="linkedin-icon">
+                    </a>
+                </div>
+                <div id="instructions-panel">
+                    <p id="instructions">Instructions</p>
+                    <div id="left-key-container">
+                        <p id="left-text"> Use left key to move left</p>
+                        <img id="left-key" src="../assets/kisspng-arrow-computer-icons-encapsulated-postscript-left-arrow-5ac396815db8c2.2997985015227674893839.png">
+                    </div>
+                    <div id="right-key-container">
+                        <p id="right-text">Use right key to move right</p>
+                        <img id="right-key" src="../assets/right-arrow.png">
+                    </div>
                 </div>
             </div>
-            <!-- <div id="game-over">
-                <h1> Game Over</h1>
-            </div>
-            <div>
-                <button id="reset-button">RESTART GAME</button>
-            </div> -->
-        </div>
-        <!-- <div id="modal" class="hidden">
-            <p>this is where the game goes</p>
-        </div> -->
-        
-        
-        <div id="game">
-            <div id="basketball"></div>
-           <div id="basket"></div>
-        </div>
-        <!-- <div id="">
-
-        </div> -->
         <script src="./bundle.js"></script>
     </body>
 </html>
