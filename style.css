@@ -56,13 +56,15 @@ table {
     display: flex;
     justify-content: center;
     font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bree Serif', serif;
+
     color: white;
+    font-weight: 600;
     background-color: black;
 }
 
 #game{
-    margin: 37px 100px 0% 127px;
+    margin: 37px 70px 0% 127px;
     /* position: fixed; */
     width: 800px;
     height: 700px;
@@ -77,14 +79,14 @@ table {
 #gameview{
   display: flex;
   background-image: url("assets/background-basketball-court.jpg");
-  padding-bottom: 85px;
+  padding-bottom: 35px;
 }
 
 .hidden {
   display: none;
 }
 
-.modal-screen, #introduction {
+#introduction {
   z-index: 9;
   position: fixed;
   top: 0%;
@@ -92,6 +94,26 @@ table {
   left: 0%;
   right: 0%;
   background: rgba(0, 0, 0, .3);
+}
+
+#modal{
+    z-index: 999;
+  position: fixed;
+  background: white;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 65%;
+  /* max-width: 800px; */
+  /* height: 50%; */
+  top: 25%;
+  left: 17.5%;
+  text-align: center;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
 }
 
 
@@ -140,7 +162,7 @@ table {
     content: url("assets/basketball-image.png");
     border-radius: 65px;
     position: relative;
-    animation: slide 2s infinite linear;
+    animation: slide 1s infinite linear;
     
     /* animation-iteration-count: 1 */
     /* overflow: hidden; */
@@ -157,7 +179,7 @@ table {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  width: 120%;
+  width: 100%;
   height: 20%;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
   /* margin: 2px 0; */
@@ -183,14 +205,14 @@ table {
   /* display: flex; */
   border: 1px solid black;
   margin: auto;
-  width: 120%;
+  width: 100%;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
 }
 
 #left-key{
     height: 70px;
     float: right;
-    padding-left: 25px;
+    padding-left: -5px;
 }
 
 #right-key{
@@ -198,6 +220,7 @@ table {
      float: right;
      padding-left: 15px;
      padding-bottom: 20px;
+     padding-right: 30px;
 }
 
 #instructions{
@@ -236,5 +259,47 @@ table {
 }
 
 #right-text{
-  padding: 30px 60px 0px 60px;
+  padding: 30px 30px 0px 60px;
+}
+
+#score-wrapper{
+  width: 100%;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  /* padding-bottom: 30px; */
+}
+
+#score-title{
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+
+#score-wrapper{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+
+#high-score-container{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  
+}
+
+#high-score{
+  display: flex;
+  justify-content: center;
+  
+}
+
+#score{
+  display: flex;
+  justify-content: center;
+}
+#high-score-title{
+  font-size: 30px;
+  padding-bottom: 5px;
 }

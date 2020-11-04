@@ -2,6 +2,7 @@
     <head>
         <h1 id="title"> BasketBomb</h1>
         <link rel="stylesheet" href="../style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="gameview">
@@ -19,19 +20,33 @@
                         <button id="start-button">START GAME</button>
                     </div>
                 </div>
-                <!-- <div id="game-over">
-                    <h1> Game Over</h1>
-                </div>
-                <div>
-                    <button id="reset-button">RESTART GAME</button>
+                <!-- <div id="modal" class="hidden" >
+                    <div id="modal-content">
+                        <div id="game-over">
+                            <h1> Game Over</h1>
+                        </div>
+                        <div>
+                            <button id="reset-button">RESTART GAME</button>
+                        </div>
+                    </div>
                 </div> -->
             </div>
             <div id="game">
                 <div id="basketball"></div>
-                <div id=counter></div>
+                
             <div id="basket"></div>
         </div>
             <div id="right-panel">
+                <div id="score-wrapper">
+                    <div id="score-container">
+                        <h3 id="score-title">Score</h3>
+                        <div id="score">0</div>
+                    </div>
+                    <div div="high-score-container">
+                        <h3 id="high-score-title">High Score</h3>
+                        <span id="high-score">0</span>
+                    </div>
+                </div>
                 <div id="links">
                     <a id="github" href="https://github.com/jonsiu826" target="_blank">
                         <img id="github-logo" src="../assets/GitHub-Mark-64px.png" alt="github-icon">
