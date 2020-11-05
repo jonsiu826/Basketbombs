@@ -9,15 +9,17 @@ let score = 0;
 let highScore = 0;
 
 basketball.style.animation = "none";
-bomb.style.animation = "none"
+bomb.style.animation = "none";
+
 document.addEventListener("DOMContentLoaded", () => {
     let startButton = document.getElementById("start-button");
     let resetButton = document.getElementById("reset-button");
 
   startButton.addEventListener("click", () => { 
     document.getElementById("introduction").classList.add("hidden");
-    basketball.style.animation = "basketballslide 1.5s infinite linear"
-    bomb.style.animation = "slide 2s infinite linear"
+    basketball.style.animation = "basketballslide 2s infinite linear"
+    bomb.style.animation = "slide 1s infinite linear"
+
     // setTimeout(1000)
     startGame();
    })
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
    resetButton.addEventListener("click", () => { 
     //    setTimeout(1000)
        resetGame();
-       bomb.style.animation = "slide 1.5s infinite linear"
+       bomb.style.animation = "slide 1s infinite linear"
        basketball.style.animation = "basketballslide 2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
@@ -122,8 +124,8 @@ function resetGame(){
     });
 
       bomb.addEventListener('animationiteration', () => {
-        let randomBomb = Math.floor(Math.random() * 8);
-        left = randomBomb * 100;
+        let resetRandomBomb = Math.floor(Math.random() * 8);
+        left = resetRandomBomb * 100;
         bomb.style.left = left + "px";
     });
     
