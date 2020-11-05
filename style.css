@@ -171,16 +171,28 @@ table {
     content: url("assets/basketball-image.png");
     border-radius: 65px;
     position: relative;
-    animation: slide 1s infinite linear;
-    
-    /* animation-iteration-count: 1 */
-    /* overflow: hidden; */
+    animation: basketballSlide 2s infinite linear;
+}
+
+#bomb{
+    width: 80px;
+    height: 80px;
+    top: 600px;
+    background-color: black;
+    /* content: url("assets/bomb.png"); */
+    border-radius: 65px;
+    position: relative;
+    animation: slide 2s infinite linear;
+}
+
+@keyframes basketballslide{
+    0%{top: 0px};
+    100%{top:500px};
 }
 
 @keyframes slide{
-    0%{top: 0px};
+    0%{top: -200px};
     100%{top:500px};
-    
 }
 
 #links {
