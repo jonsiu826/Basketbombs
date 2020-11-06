@@ -152,7 +152,6 @@ function resetGame(){
     
     function moveRight(){
         let left = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
-        // left += 100;
         if(left<800){
             basket.style.left = left + "px";
         }
