@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   startButton.addEventListener("click", () => { 
     document.getElementById("introduction").classList.add("hidden");
     basketball.style.animation = "basketballslide 2s infinite linear"
-    bomb.style.animation = "slide 1s infinite linear"
+    bomb.style.animation = "slide 1.5s infinite linear"
 
     // setTimeout(1000)
     startGame();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
    resetButton.addEventListener("click", () => { 
     //    setTimeout(1000)
        resetGame();
-       bomb.style.animation = "slide 1s infinite linear"
+       bomb.style.animation = "slide 1.5s infinite linear"
        basketball.style.animation = "basketballslide 2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
