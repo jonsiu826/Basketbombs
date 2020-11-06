@@ -8,24 +8,29 @@ let bomb = document.getElementById("bomb");
 let score = 0;
 let highScore = 0;
 
+
+
 basketball.style.animation = "none";
 bomb.style.animation = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
     let startButton = document.getElementById("start-button");
     let resetButton = document.getElementById("reset-button");
+    let easy = document.getElementById("easy");
+    let medium = document.getElementById("medium");
+    let hard = document.getElementById("hard");
+    let easy1 = document.getElementById("easy");
+    let medium1 = document.getElementById("medium");
+    let hard1 = document.getElementById("hard");
 
   startButton.addEventListener("click", () => { 
     document.getElementById("introduction").classList.add("hidden");
     basketball.style.animation = "basketballslide 2s infinite linear"
     bomb.style.animation = "slide 1.5s infinite linear"
-
-    // setTimeout(1000)
     startGame();
    })
 
    resetButton.addEventListener("click", () => { 
-    //    setTimeout(1000)
        resetGame();
        bomb.style.animation = "slide 1.5s infinite linear"
        basketball.style.animation = "basketballslide 2s infinite linear"
@@ -33,7 +38,47 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
+    easy.addEventListener("click", () => {
+        document.getElementById("introduction").classList.add("hidden");
+        bomb.style.animation = "slide 2s infinite linear"
+        basketball.style.animation = "basketballslide 2s infinite linear"
+         startGame();
+    })
 
+     medium.addEventListener("click", () => {
+        document.getElementById("introduction").classList.add("hidden");
+        bomb.style.animation = "slide 1.5s infinite linear"
+        basketball.style.animation = "basketballslide 1.5s infinite linear"
+        startGame();
+    })
+
+     hard.addEventListener("click", () => {
+        document.getElementById("introduction").classList.add("hidden");
+        bomb.style.animation = "slide 1s infinite linear"
+        basketball.style.animation = "basketballslide 1s infinite linear"
+        startGame();
+    })
+
+      easy1.addEventListener("click", () => { 
+       resetGame();
+       bomb.style.animation = "slide 2s infinite linear"
+       basketball.style.animation = "basketballslide 2s infinite linear"
+       document.getElementById("modal").classList.add("hidden");
+  })
+
+       medium1.addEventListener("click", () => { 
+       resetGame();
+       bomb.style.animation = "slide 1.5s infinite linear"
+        basketball.style.animation = "basketballslide 1.5s infinite linear"
+       document.getElementById("modal").classList.add("hidden");
+  })
+
+       hard1.addEventListener("click", () => { 
+       resetGame();
+       bomb.style.animation = "slide 0.5s infinite linear"
+        basketball.style.animation = "basketballslide 1s infinite linear"
+       document.getElementById("modal").classList.add("hidden");
+  })
 
 function startGame(){
     // setTimeout(1000)
