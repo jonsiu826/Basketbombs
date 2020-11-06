@@ -66,8 +66,10 @@ table {
 #game{
     margin: 37px 70px 0% 127px;
     /* position: fixed; */
-    width: 800px;
-    height: 700px;
+    min-width: 800px;
+    max-width: 800px;
+    max-height: 700px;
+    min-height: 700px;
     border: 1px solid black;
     background-color: wheat;
     overflow: hidden;
