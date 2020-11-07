@@ -113,6 +113,7 @@ function startGame(){
         left = randomBasketball * 100;
         basketball.style.left = left + "px";
          score++;
+         swishSound();
         scoreDisplay.innerHTML = score
         if (score > highScore) highScore = score;
         highscoreDisplay.innerHTML = highScore;
@@ -178,7 +179,7 @@ function resetGame(){
         randomBasketball1 = Math.floor(Math.random() * 8);
         left = random1 * 100;
         basketball.style.left = left + "px";
-
+        
     });
 
       bomb.addEventListener('animationiteration', () => {
@@ -250,15 +251,15 @@ function stopMusic() {
 }
 
 function swishSound() {
-    const correctWord = new Audio("./assets/swish.mp3");
-    if (soundOn === false) correctWord.muted = true;
-    // correctWord.volume = .40;
-    correctWord.play();
+    const madeBasket = new Audio("./assets/swishsound.mov");
+    if (soundOn === false) madeBasket.muted = true;
+    madeBasket.volume = .40;
+    madeBasket.play();
 }
 
 function bombSound() {
     const gameOver =  new Audio("./assets/explosion.mp3");
     if (soundOn === false) gameOver.muted = true;
-    // gameOver.volume = .20;
+    gameOver.volume = .20;
     gameOver.play();
 }
