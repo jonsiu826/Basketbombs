@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="./style.css" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="gameview">
@@ -14,22 +15,28 @@
                     <div id="game-description"> Items are falling from the sky! Be sure to catch all the items in your basket without letting
                         them hit the ground. Beware of the bombs!
                     </div>
-                    <div id='difficulty'>Choose Your Difficulty
-                        <button id='easy'>EASY</button>
-                        <button id='medium'>MEDIUM</button>
-                        <button id='hard'>HARD</button>
+                    <div class='start-buttons'>
+                        <p>Choose Your Difficulty</p>
+                        <div>
+                            <button id='easy'>EASY</button>
+                            <button id='medium'>MEDIUM</button>
+                            <button id='hard'>HARD</button>
+                        </div>
                     </div>
                 </div>
             </div>
                     <div id="modal" class="hidden">
                         <div id="modal-content" >
                             <div id="game-over">
-                                <h1> Game Over</h1>
+                                <h1 id="game-over"> Game Over</h1>
                             </div>
-                            <div class='select-difficulty'>Choose Your Difficulty
-                                <button id='easy1'>EASY</button>
-                                <button id='medium1'>MEDIUM</button>
-                                <button id='hard1'>HARD</button>
+                            <div class='reset-buttons'>
+                                <p>Choose Your Difficulty</p>
+                                <div>
+                                    <button id='easy1'>EASY</button>
+                                    <button id='medium1'>MEDIUM</button>
+                                    <button id='hard1'>HARD</button>
+                                </div>
                             </div>
                         </div>
                     </div>

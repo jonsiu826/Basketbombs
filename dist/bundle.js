@@ -20,8 +20,8 @@ basketball.style.animation = "none";
 bomb.style.animation = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
-    let startButton = document.getElementById("start-button");
-    let resetButton = document.getElementById("reset-button");
+    // let startButton = document.getElementById("start-button");
+    // let resetButton = document.getElementById("reset-button");
     let easy = document.getElementById("easy");
     let medium = document.getElementById("medium");
     let hard = document.getElementById("hard");

@@ -56,8 +56,8 @@ table {
     display: flex;
     justify-content: center;
     font-size: 50px;
-    font-family: 'Bree Serif', serif;
-
+    font-family: 'Luckiest Guy', cursive;
+    padding-top: 13px;
     color: white;
     font-weight: 600;
     background-color: black;
@@ -332,3 +332,46 @@ table {
   padding-bottom: 5px;
   font-family: 'Press Start 2P', cursive;
 }
+
+#game-over{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+  /* padding-top: 5px; */
+}
+
+#easy1{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+#medium1{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+#hard1{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+#easy{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+#medium{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+#hard{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
