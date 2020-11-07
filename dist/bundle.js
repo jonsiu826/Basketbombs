@@ -152,7 +152,6 @@ function startGame(){
             bomb.style.animation = "none";
             scoreDisplay.innerHTML = 0
             document.getElementById("modal").classList.remove("hidden")
-            //  bombSound();
         }
     },1);
 }
@@ -210,7 +209,6 @@ function resetGame(){
             document.getElementById("modal").classList.remove("hidden");
             basketball.style.animation = "none";
             bomb.style.animation = "none";
-            // bombSound();
         }
     },1);
 

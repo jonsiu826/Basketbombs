@@ -184,12 +184,13 @@ table {
     width: 80px;
     height: 80px;
     top: 600px;
-    background-color: black;
-    /* content: url("assets/bomb.png"); */
-    border-radius: 65px;
+    background-color: wheat;
+    content: url("assets/hiclipart.com.png");
+    /* border-radius: 65px; */
     position: relative;
     /* animation-delay: 3s; */
     animation: slide 2s infinite linear;
+    left: 5px;
 }
 
 @keyframes basketballslide{
