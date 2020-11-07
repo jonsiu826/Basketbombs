@@ -174,7 +174,7 @@ table {
     border-radius: 65px;
     position: relative;
     /* animation-delay: 3s; */
-    animation: basketballSlide 2s infinite linear;
+    /* animation: basketballSlide 2s infinite linear; */
 }
 
 #bomb{
