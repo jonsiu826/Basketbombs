@@ -63,6 +63,10 @@ table {
     background-color: black;
 }
 
+#intro-title{
+  font-family: 'Luckiest Guy', cursive;
+}
+
 #game{
     margin: 37px 70px 0% 127px;
     /* position: fixed; */
@@ -136,7 +140,7 @@ table {
   top: 10vh;
   left: 17%;
   padding: 50px;
-  background: white;
+  background-color: lightgray;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   font-size: 18px;
@@ -153,7 +157,6 @@ table {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* background-color: red; */
 } 
 
 #basket{
@@ -216,22 +219,13 @@ table {
   margin-left: 5px;
 }
 
-/* .links {
-  width: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0px;
-} */
 
 #instructions-panel{
   /* display: flex; */
   border: 1px solid black;
   margin: auto;
-  min-width: 380px;
-  max-width: 380px;
+  min-width: 365px;
+  max-width: 365px;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
 }
 
@@ -250,12 +244,12 @@ table {
 }
 
 #instructions{
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
   font-weight: 600;
   /* justify-content: center; */
   /* align-items: center; */
-  padding: 5% 10% 3% 30%;
+  padding: 5% 10% 3% 17%;
   left: 17%;
   background-color: wheat;
 }
@@ -281,11 +275,13 @@ table {
 }
 
 #left-text{
-  padding: 30px 60px 0px 60px;
+  padding: 30px 43px 0px 60px;
+  /* font-family: 'Press Start 2P', cursive; */
 }
 
 #right-text{
   padding: 30px 30px 0px 60px;
+  /* font-family: 'Press Start 2P', cursive; */
 }
 
 #score-wrapper{
