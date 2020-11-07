@@ -5,6 +5,7 @@ const highscoreDisplay = document.getElementById('high-score');
 let basketball = document.getElementById("basketball");
 let basket = document.getElementById("basket");
 let bomb = document.getElementById("bomb");
+const sound = document.getElementById("sound-settings");
 let score = 0;
 let highScore = 0;
 
@@ -144,6 +145,7 @@ function startGame(){
             bomb.style.animation = "none";
             scoreDisplay.innerHTML = 0
             document.getElementById("modal").classList.remove("hidden")
+            //  bombSound();
         }
     },1);
 }
@@ -201,6 +203,7 @@ function resetGame(){
             document.getElementById("modal").classList.remove("hidden");
             basketball.style.animation = "none";
             bomb.style.animation = "none";
+            // bombSound();
         }
     },1);
 
@@ -217,4 +220,45 @@ function firstBombMedium(){
 function firstBombHard(){
     bomb.style.animation = "slide 1s infinite linear";
 }
+const gameMusic = new Audio ("./assets/rumble.mov");
+let soundOn = false;
 
+sound.addEventListener("click", () => {
+    // soundOn === true ? soundOn = false : soundOn = true;
+
+    if (soundOn === true) {
+        soundOn = false;
+        stopMusic();
+    }   else {
+        soundOn = true;
+        backgroundMusic();
+    }
+
+    sound.innerHTML === "PLAY MUSIC" ? sound.innerHTML = "PAUSE MUSIC" : sound.innerHTML = "PLAY MUSIC"
+});
+
+function backgroundMusic() {
+    if (soundOn === false) gameMusic.muted = true;
+    if (soundOn === true) gameMusic.muted = false;
+    gameMusic.volume = .10;
+    gameMusic.play();
+    gameMusic.loop = true;
+}
+
+function stopMusic() {
+    gameMusic.pause();
+}
+
+function swishSound() {
+    const correctWord = new Audio("./assets/swish.mp3");
+    if (soundOn === false) correctWord.muted = true;
+    // correctWord.volume = .40;
+    correctWord.play();
+}
+
+function bombSound() {
+    const gameOver =  new Audio("./assets/explosion.mp3");
+    if (soundOn === false) gameOver.muted = true;
+    // gameOver.volume = .20;
+    gameOver.play();
+}
