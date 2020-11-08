@@ -65,6 +65,7 @@ table {
 
 #intro-title{
   font-family: 'Luckiest Guy', cursive;
+  font-size: 30px;
 }
 
 #game{
@@ -101,6 +102,7 @@ table {
   left: 0%;
   right: 0%;
   background: rgba(0, 0, 0, .3);
+  background-color: orange;
 }
 /* #modal{
     z-index: 9;
@@ -129,8 +131,13 @@ table {
   align-items: center;
   padding: 76px;
   background-color: lightgray;
+  border: 20px solid black;
+  opacity: 0.9;
 }
 
+#modal-container{
+    border: 20px solid black;
+}
 
 #introduction-content {
   z-index: 10;
@@ -149,6 +156,7 @@ table {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 20px solid black;
 }
  
 #game-description {
@@ -248,11 +256,13 @@ table {
   font-size: 20px;
   font-family: 'Press Start 2P', cursive;
   font-weight: 600;
+  color: white;
   /* justify-content: center; */
   /* align-items: center; */
   padding: 5% 10% 3% 17%;
   left: 17%;
-  background-color: wheat;
+  background-color: black;
+
 }
 
 
@@ -333,7 +343,13 @@ table {
 #game-over{
   font-family: 'Luckiest Guy', cursive;
   font-size: 40px;
+  padding: 10px;
+  color: orange
   /* padding-top: 5px; */
+}
+
+#reset-buttons{
+  padding: 5px;
 }
 
 #easy1{
@@ -372,3 +388,26 @@ table {
   border-radius: 3px;
 }
 
+#sound-settings{
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+}
+
+#reset-buttons{
+  padding: 5px;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+html {
+    overflow: hidden;
+}

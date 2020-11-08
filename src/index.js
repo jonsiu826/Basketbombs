@@ -8,6 +8,7 @@ let bomb = document.getElementById("bomb");
 const sound = document.getElementById("sound-settings");
 let score = 0;
 let highScore = 0;
+let isPlaying = true
 
 
 
@@ -132,7 +133,7 @@ function startGame(){
         }
     });
 
-
+   
  
     setInterval(function(){
         let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
@@ -151,7 +152,6 @@ function startGame(){
 }
 
 function resetGame(){
-    // setTimeout(1000)
    score = 0
     document.addEventListener("keydown", event => {
       if(event.key==="ArrowLeft"){moveLeft();}
@@ -255,9 +255,9 @@ function swishSound() {
     madeBasket.play();
 }
 
-function bombSound() {
-    const gameOver =  new Audio("./assets/explosion.mp3");
-    if (soundOn === false) gameOver.muted = true;
-    gameOver.volume = .20;
-    gameOver.play();
-}
+// function bombSound() {
+//     const gameOver =  new Audio("./assets/bomb.mov");
+//     if (soundOn === false) gameOver.muted = true;
+//         gameOver.volume = .40;
+//         gameOver.play();
+// }
