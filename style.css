@@ -165,6 +165,7 @@ table {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
 } 
 
 #basket{
