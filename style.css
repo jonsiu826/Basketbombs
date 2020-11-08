@@ -66,10 +66,11 @@ table {
 #intro-title{
   font-family: 'Luckiest Guy', cursive;
   font-size: 30px;
+
 }
 
 #game{
-    margin: 37px 70px 0% 127px;
+    margin: 0px 70px 0% 127px;
     /* position: fixed; */
     min-width: 800px;
     max-width: 800px;
@@ -87,7 +88,7 @@ table {
 #gameview{
   display: flex;
   background-image: url("assets/background-basketball-court.jpg");
-  padding-bottom: 35px;
+  /* padding-bottom: 35px; */
 }
 
 .hidden {
@@ -140,24 +141,29 @@ table {
 }
 
 #introduction-content {
-  z-index: 10;
-  position: fixed;
-  width: 60vw;
-  height: 20vh;
-  top: 10vh;
-  left: 17%;
-  padding: 50px;
-  background-color: lightgray;
-  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  font-size: 18px;
-  line-height: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 20px solid black;
+    z-index: 10;
+    position: fixed;
+    width: 60vw;
+    height: 20vh;
+    top: 10vh;
+    max-width: 800px;
+    min-width: 800px;
+    max-height: 400px;
+    min-height: 150px;
+    left: 17%;
+    padding: 50px;
+    background-color: lightgray;
+    box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 20px solid black;
 }
+
  
 #game-description {
   display: flex;
@@ -400,6 +406,10 @@ table {
 #reset-buttons{
   padding: 5px;
 }
+
+html{
+  overflow: hidden;
+}
  
 /* body {
     margin: 0;
@@ -408,6 +418,4 @@ table {
     
     background-color: black;
 } 
-html {
-    overflow: hidden;
-} */
+
