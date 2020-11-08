@@ -14,7 +14,7 @@ let bomb = document.getElementById("bomb");
 const sound = document.getElementById("sound-settings");
 let score = 0;
 let highScore = 0;
-
+let isPlaying = true
 
 
 
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     easy.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
-        backgroundMusic()
         // bomb.style.animation = "slide 2s infinite linear"
         basketball.style.animation = "basketballslide 2s infinite linear"
         setInterval(firstBombEasy, 3000)
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
      medium.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
-        backgroundMusic()
         setInterval(firstBombMedium, 3000)
         basketball.style.animation = "basketballslide 1.5s infinite linear"
     })
@@ -67,22 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
      hard.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
-        backgroundMusic()
         setInterval(firstBombHard, 3000)
         basketball.style.animation = "basketballslide 1s infinite linear"
     })
 
       easy1.addEventListener("click", () => { 
        resetGame();
-       backgroundMusic()
-       bomb.style.animation = "slide 2.5s infinite linear";
+        bomb.style.animation = "slide 2.5s infinite linear";
        basketball.style.animation = "basketballslide 2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
        medium1.addEventListener("click", () => { 
        resetGame();
-       backgroundMusic()
         bomb.style.animation = "slide 2s infinite linear";
         basketball.style.animation = "basketballslide 1.5s infinite linear"
        document.getElementById("modal").classList.add("hidden");
@@ -90,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
        hard1.addEventListener("click", () => { 
        resetGame();
-       backgroundMusic()
         bomb.style.animation = "slide 1.5s infinite linear";
         basketball.style.animation = "basketballslide 1s infinite linear"
        document.getElementById("modal").classList.add("hidden");
@@ -232,17 +226,17 @@ function firstBombHard(){
     bomb.style.animation = "slide 1s infinite linear";
 }
 const gameMusic = new Audio ("./assets/rumble.mov");
-let soundOn = true;
+let soundOn = false;
 
 sound.addEventListener("click", () => {
     // soundOn === true ? soundOn = false : soundOn = true;
 
-    if (soundOn === false) {
-        soundOn = true;
-        backgroundMusic();
-    }   else {
+    if (soundOn === true) {
         soundOn = false;
         stopMusic();
+    }   else {
+        soundOn = true;
+        backgroundMusic();
     }
 
     sound.innerHTML === "PLAY MUSIC" ? sound.innerHTML = "PAUSE MUSIC" : sound.innerHTML = "PLAY MUSIC"
