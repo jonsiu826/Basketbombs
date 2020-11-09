@@ -261,9 +261,9 @@ function swishSound() {
     madeBasket.play();
 }
 
-function bombSound() {
-    const gameOver =  new Audio("./assets/bomb.mov");
-    if (soundOn === false) gameOver.muted = true;
-        gameOver.volume = .40;
-        gameOver.play();
-}
+// function bombSound() {
+//     const gameOver =  new Audio("./assets/bomb.mov");
+//     if (soundOn === false) gameOver.muted = true;
+//         gameOver.volume = .40;
+//         gameOver.play();
+// }
