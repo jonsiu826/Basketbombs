@@ -37,4 +37,8 @@ Collision detection is incorporated with the code snippet below. I utilized getC
         }
     },1);
     
+```
+### Future Features
 
+* Implement another falling item 
+* Implement additional rule
