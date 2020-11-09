@@ -114,13 +114,13 @@ function startGame(){
             basket.style.left = left + "px";
         }
     }
-     let randomBasketball;
+    let randomBasketball;
     basketball.addEventListener('animationiteration', () => {
         randomBasketball = Math.floor(Math.random() * 8);
         left = randomBasketball * 100;
         basketball.style.left = left + "px";
-         score++;
-         swishSound();
+        score++;
+        swishSound();
         scoreDisplay.innerHTML = score
         if (score > highScore) highScore = score;
         highscoreDisplay.innerHTML = highScore;
@@ -129,7 +129,6 @@ function startGame(){
      bomb.addEventListener('animationiteration', () => {
         let randomBomb = Math.floor(Math.random() * 8);
         let startbombleft = randomBomb * 100;
-        // bomb.style.left = startbombleft + "px";
         if (randomBomb === randomBasketball && randomBomb === 1){
             startbombleft = (randomBomb * 100) + 100;
         } else if (randomBomb === randomBasketball && randomBomb <= 8){
