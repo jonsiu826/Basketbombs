@@ -1,5 +1,3 @@
-console.log("Hello from webpack")
-
 let scoreDisplay = document.getElementById('score')
 const highscoreDisplay = document.getElementById('high-score');
 let basketball = document.getElementById("basketball");
