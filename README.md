@@ -1,4 +1,4 @@
-# javascript_project
+# Basketbomb
 
 [Play the game here!](https://jonsiu826.github.io/javascript_project/)
 
