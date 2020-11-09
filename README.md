@@ -2,6 +2,10 @@
 
 [Play the game here!](https://jonsiu826.github.io/javascript_project/)
 
+<p align="center">
+  <img src="https://github.com/jonsiu826/javascript_project/blob/main/assets/gamplay.png">
+</p>
+
 ### Instructions:
 
 <p align="center">
@@ -16,7 +20,7 @@
 
 ### Technical Implementation
 
-Collision detection is incorporated with the code snippet below. I utilized getComputedStyle and getPropertyValue to get information of where my basket, bomb, and basketball is located on the grid. I created 
+Collision detection is incorporated with the code snippet below. I utilized getComputedStyle and getPropertyValue to get information of where my basket, bomb, and basketball is located on the grid. I created an if statement to check if the basketball and basket are not at the same position or if the basket and bomb are at the same position when the basketball and bomb are at the bottom of the grid.
 
 ```setInterval(function(){
         let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
@@ -33,4 +37,4 @@ Collision detection is incorporated with the code snippet below. I utilized getC
         }
     },1);
     
-dfkjnodsnfnds
+
