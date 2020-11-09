@@ -16,6 +16,8 @@
 
 ### Technical Implementation
 
+Collision detection is incorporated with the code snippet below. I utilized getComputedStyle and getPropertyValue to get information of where my basket, bomb, and basketball is located on the grid. I created 
+
 ```setInterval(function(){
         let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
         let blockLeft = parseInt(window.getComputedStyle(basketball).getPropertyValue("left"));
@@ -30,3 +32,5 @@
             document.getElementById("modal").classList.remove("hidden")
         }
     },1);
+    
+dfkjnodsnfnds
