@@ -4,7 +4,9 @@
 
 ### Instructions:
 
-* Basketballs are falling from the sky! Be sure to catch all the basketballs in your basket without letting them hit the ground. Beware of the bombs! Use your left and right keys to move your basket.
+<p align="center">
+  <img src="https://github.com/jonsiu826/javascript_project/blob/main/assets/intromodal.png">
+</p>
 
 ### Technology and Languages:
 
