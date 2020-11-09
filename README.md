@@ -20,7 +20,7 @@
 
 ### Technical Implementation
 
-Collision detection is incorporated with the code snippet below. I utilized getComputedStyle and getPropertyValue to get information of where my basket, bomb, and basketball is located on the grid. I created an if statement to check if the basketball and basket are not at the same position or if the basket and bomb are at the same position when the basketball and bomb are at the bottom of the grid.
+Collision detection is incorporated with the code snippet below. I utilized getComputedStyle and getPropertyValue to get information of where my basket, bomb, and basketball is located on the grid. I created an if statement to check if the basketball and basket are not at the same position or if the basket and bomb are at the same position when the basketball and bomb are at the bottom of the grid. Game over modal is shown if the collision detection is true and bomb and basketball animation are set to none.
 
 ```setInterval(function(){
         let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
