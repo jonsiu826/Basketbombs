@@ -2,6 +2,8 @@
 
 [Play the game here!](https://jonsiu826.github.io/javascript_project/)
 
+Basketbomb is game built solely based on VanillaJS, CSS, and HTML. It utilizes CSS Keyframes to allow the bombs and basketballs to fall seemlessly. The user controls the movement of the basket. Their goal is to ensure no basketball hits the ground while also avoiding bombs. Players can select their level of difficulties. As the level of difficulties increase, so will the speed at which the basketballs fall.  
+
 <p align="center">
   <img src="https://github.com/jonsiu826/javascript_project/blob/main/assets/gamplay.png">
 </p>
