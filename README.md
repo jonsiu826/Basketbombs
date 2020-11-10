@@ -40,7 +40,8 @@ Collision detection is incorporated with the code snippet below. I utilized getC
     },1);
     
 ```
-
+I developed the randomization of where basketballs and bombs fall with the code snippet below. I utilized animation iteration to continuously display a basketball/bomb falling. In order to incorpate randomization, I created a function that used .random and multiplied it by 8 because my grid width is 800px. From there, I set the variable of "left" to the basketball.style.left which dictates where the basketball falls. If the ball finishes 1 iteration of the animation, then the score will increase by 1. 
+```
   let randomBasketball;
     basketball.addEventListener('animationiteration', () => {
         randomBasketball = Math.floor(Math.random() * 8);
