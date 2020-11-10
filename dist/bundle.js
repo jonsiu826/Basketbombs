@@ -4,7 +4,7 @@
   \**********************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-console.log("Hello from webpack")
+
 
 let scoreDisplay = document.getElementById('score')
 const highscoreDisplay = document.getElementById('high-score');

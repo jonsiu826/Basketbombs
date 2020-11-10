@@ -149,7 +149,7 @@ table {
     max-width: 800px;
     min-width: 800px;
     max-height: 400px;
-    min-height: 150px;
+    min-height: 275px;
     left: 17%;
     padding: 50px;
     background-color: lightgray;
@@ -420,3 +420,10 @@ html{
     background-color: black;
 }  */
 
+#intro-links{
+  padding: 10px;
+}
+
+#start-buttons{
+  padding: 10px;
+}
