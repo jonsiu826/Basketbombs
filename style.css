@@ -103,7 +103,7 @@ table {
   left: 0%;
   right: 0%;
   background: rgba(0, 0, 0, .3);
-  background-color: orange;
+  /* background-color: orange; */
 }
 /* #modal{
     z-index: 9;
@@ -149,7 +149,7 @@ table {
     max-width: 800px;
     min-width: 800px;
     max-height: 400px;
-    min-height: 275px;
+    min-height: 303px;
     left: 17%;
     padding: 50px;
     background-color: lightgray;
@@ -172,6 +172,8 @@ table {
   justify-content: space-between;
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  padding-bottom: 20px;
 } 
 
 #basket{
@@ -363,36 +365,42 @@ table {
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #medium1{
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #hard1{
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #easy{
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #medium{
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #hard{
   background-color: black;
   color: white;
   border-radius: 3px;
+  padding: 1px;
 }
 
 #sound-settings{

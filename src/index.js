@@ -216,11 +216,11 @@ function firstBombEasy(){
 }
 
 function firstBombMedium(){
-    bomb.style.animation = "slide 1.5s infinite linear";
+    bomb.style.animation = "slide 2s infinite linear";
 }
 
 function firstBombHard(){
-    bomb.style.animation = "slide 1s infinite linear";
+    bomb.style.animation = "slide 1.5s infinite linear";
 }
 const gameMusic = new Audio ("./assets/rumble.mov");
 let soundOn = true;
