@@ -40,6 +40,31 @@ Collision detection is incorporated with the code snippet below. I utilized getC
     },1);
     
 ```
+
+  let randomBasketball;
+    basketball.addEventListener('animationiteration', () => {
+        randomBasketball = Math.floor(Math.random() * 8);
+        left = randomBasketball * 100;
+        basketball.style.left = left + "px";
+        score++;
+        swishSound();
+        scoreDisplay.innerHTML = score
+        if (score > highScore) highScore = score;
+        highscoreDisplay.innerHTML = highScore;
+    });
+
+     bomb.addEventListener('animationiteration', () => {
+        let randomBomb = Math.floor(Math.random() * 8);
+        let startbombleft = randomBomb * 100;
+        if (randomBomb === randomBasketball && randomBomb === 1){
+            startbombleft = (randomBomb * 100) + 100;
+        } else if (randomBomb === randomBasketball && randomBomb <= 8){
+            startbombleft = (randomBomb * 100) - 100
+        } else {
+            bomb.style.left = startbombleft + "px";
+        }
+    });
+```
 ### Future Features
 
 * Implement another falling item 
