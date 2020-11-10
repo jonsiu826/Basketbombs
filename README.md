@@ -2,6 +2,8 @@
 
 [Play the game here!](https://jonsiu826.github.io/javascript_project/)
 
+Basketbomb is game built solely based on VanillaJS, CSS, and HTML. It utilizes CSS Keyframes to allow the bombs and basketballs to fall seemlessly. The user controls the movement of the basket. Their goal is to ensure no basketball hits the ground while also avoiding bombs. Players can select their level of difficulties. As the level of difficulties increase, so will the speed at which the basketballs fall.  
+
 <p align="center">
   <img src="https://github.com/jonsiu826/javascript_project/blob/main/assets/gamplay.png">
 </p>
@@ -37,6 +39,32 @@ Collision detection is incorporated with the code snippet below. I utilized getC
         }
     },1);
     
+```
+I developed the randomization of where basketballs and bombs fall with the code snippet below. I utilized animation iteration to continuously display a basketball/bomb falling. In order to incorpate randomization, I created a function that used .random and multiplied it by 8 because my grid width is 800px. From there, I set the variable of "left" to the basketball.style.left which dictates where the basketball falls. If the ball finishes 1 iteration of the animation, then the score will increase by 1. 
+```
+  let randomBasketball;
+    basketball.addEventListener('animationiteration', () => {
+        randomBasketball = Math.floor(Math.random() * 8);
+        left = randomBasketball * 100;
+        basketball.style.left = left + "px";
+        score++;
+        swishSound();
+        scoreDisplay.innerHTML = score
+        if (score > highScore) highScore = score;
+        highscoreDisplay.innerHTML = highScore;
+    });
+
+     bomb.addEventListener('animationiteration', () => {
+        let randomBomb = Math.floor(Math.random() * 8);
+        let startbombleft = randomBomb * 100;
+        if (randomBomb === randomBasketball && randomBomb === 1){
+            startbombleft = (randomBomb * 100) + 100;
+        } else if (randomBomb === randomBasketball && randomBomb <= 8){
+            startbombleft = (randomBomb * 100) - 100
+        } else {
+            bomb.style.left = startbombleft + "px";
+        }
+    });
 ```
 ### Future Features
 
