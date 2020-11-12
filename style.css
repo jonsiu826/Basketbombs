@@ -207,7 +207,7 @@ table {
     position: relative;
     /* animation-delay: 3s; */
     animation: slide 2s infinite linear;
-    left: 5px;
+    left: 105px;
 }
 
 @keyframes basketballslide{

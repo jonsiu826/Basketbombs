@@ -4,8 +4,6 @@
   \**********************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-
-
 let scoreDisplay = document.getElementById('score')
 const highscoreDisplay = document.getElementById('high-score');
 let basketball = document.getElementById("basketball");
@@ -50,9 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-        // bomb.style.animation = "slide 2s infinite linear"
+        bomb.style.animation = "slide 2s infinite linear"
         basketball.style.animation = "basketballslide 2s infinite linear"
-        setInterval(firstBombEasy, 3000)
    
     })
 
@@ -60,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-        setInterval(firstBombMedium, 3000)
+         bomb.style.animation = "slide 1.5s infinite linear";
         basketball.style.animation = "basketballslide 1.5s infinite linear"
     })
 
@@ -68,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-        setInterval(firstBombHard, 3000)
+         bomb.style.animation = "slide 1s infinite linear";
         basketball.style.animation = "basketballslide 1s infinite linear"
     })
 
       easy1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 2.5s infinite linear";
+        bomb.style.animation = "slide 2s infinite linear";
        basketball.style.animation = "basketballslide 2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
@@ -83,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
        medium1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 2s infinite linear";
+        bomb.style.animation = "slide 1.5s infinite linear";
         basketball.style.animation = "basketballslide 1.5s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
@@ -91,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
        hard1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.5s infinite linear";
+        bomb.style.animation = "slide 1s infinite linear";
         basketball.style.animation = "basketballslide 1s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
@@ -120,13 +117,13 @@ function startGame(){
             basket.style.left = left + "px";
         }
     }
-     let randomBasketball;
+    let randomBasketball;
     basketball.addEventListener('animationiteration', () => {
         randomBasketball = Math.floor(Math.random() * 8);
         left = randomBasketball * 100;
         basketball.style.left = left + "px";
-         score++;
-         swishSound();
+        score++;
+        swishSound();
         scoreDisplay.innerHTML = score
         if (score > highScore) highScore = score;
         highscoreDisplay.innerHTML = highScore;
@@ -135,7 +132,6 @@ function startGame(){
      bomb.addEventListener('animationiteration', () => {
         let randomBomb = Math.floor(Math.random() * 8);
         let startbombleft = randomBomb * 100;
-        // bomb.style.left = startbombleft + "px";
         if (randomBomb === randomBasketball && randomBomb === 1){
             startbombleft = (randomBomb * 100) + 100;
         } else if (randomBomb === randomBasketball && randomBomb <= 8){
@@ -225,11 +221,11 @@ function firstBombEasy(){
 }
 
 function firstBombMedium(){
-    bomb.style.animation = "slide 1.5s infinite linear";
+    bomb.style.animation = "slide 2s infinite linear";
 }
 
 function firstBombHard(){
-    bomb.style.animation = "slide 1s infinite linear";
+    bomb.style.animation = "slide 1.5s infinite linear";
 }
 const gameMusic = new Audio ("./assets/rumble.mov");
 let soundOn = true;
