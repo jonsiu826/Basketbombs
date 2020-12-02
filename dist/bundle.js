@@ -4,7 +4,8 @@
   \**********************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-let scoreDisplay = document.getElementById('score')
+let scoreDisplay = document.getElementById('score');
+let livesDisplay = document.getElementById('lives');
 const highscoreDisplay = document.getElementById('high-score');
 let basketball = document.getElementById("basketball");
 let basket = document.getElementById("basket");
@@ -12,7 +13,8 @@ let bomb = document.getElementById("bomb");
 const sound = document.getElementById("sound-settings");
 let score = 0;
 let highScore = 0;
-let isPlaying = true
+let isPlaying = true;
+let lives = 3;
 
 
 
@@ -50,23 +52,22 @@ document.addEventListener("DOMContentLoaded", () => {
         backgroundMusic()
         bomb.style.animation = "slide 2s infinite linear"
         basketball.style.animation = "basketballslide 2s infinite linear"
-   
     })
 
      medium.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-         bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1.5s infinite linear"
+         bomb.style.animation = "slide 1.8s infinite linear";
+        basketball.style.animation = "basketballslide 1.8s infinite linear"
     })
 
      hard.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-         bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1s infinite linear"
+         bomb.style.animation = "slide 1.2s infinite linear";
+        basketball.style.animation = "basketballslide 1.2s infinite linear"
     })
 
       easy1.addEventListener("click", () => { 
@@ -80,22 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
        medium1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1.5s infinite linear"
+        bomb.style.animation = "slide 1.8s infinite linear";
+        basketball.style.animation = "basketballslide 1.8s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
        hard1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1s infinite linear"
+        bomb.style.animation = "slide 1.2s infinite linear";
+        basketball.style.animation = "basketballslide 1.2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
 function startGame(){
-    
-    // setTimeout(1000)
     document.addEventListener("keydown", event => {
       if(event.key==="ArrowLeft"){moveLeft();}
       if(event.key==="ArrowRight"){moveRight();}
@@ -122,8 +121,7 @@ function startGame(){
         randomBasketball = Math.floor(Math.random() * 8);
         left = randomBasketball * 100;
         basketball.style.left = left + "px";
-        score++;
-        swishSound();
+      
         scoreDisplay.innerHTML = score
         if (score > highScore) highScore = score;
         highscoreDisplay.innerHTML = highScore;
@@ -131,33 +129,81 @@ function startGame(){
 
      bomb.addEventListener('animationiteration', () => {
         let randomBomb = Math.floor(Math.random() * 8);
-        let startbombleft = randomBomb * 100;
-        if (randomBomb === randomBasketball && randomBomb === 1){
-            startbombleft = (randomBomb * 100) + 100;
-        } else if (randomBomb === randomBasketball && randomBomb <= 8){
-            startbombleft = (randomBomb * 100) - 100
+        if (randomBasketball == randomBomb && randomBomb == 1){
+            resetbombleft = (randomBomb * 100) + 100;
+            bomb.style.left = resetbombleft + "px";
+        } else if (randomBomb == randomBasketball1 && randomBomb <= 8){
+            resetbombleft = (randomBomb * 100) - 100
+            bomb.style.left = resetbombleft + "px";
         } else {
-            bomb.style.left = startbombleft + "px";
+            resetbombleft = randomBomb * 100;
+            bomb.style.left = resetbombleft + "px";
         }
     });
-
+        requestAnimationFrame(collision)
+    
    
+   }
  
-    setInterval(function(){
+  function collision(){
+        let start = requestAnimationFrame(collision)
         let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
         let blockLeft = parseInt(window.getComputedStyle(basketball).getPropertyValue("left"));
         let blockTop = parseInt(window.getComputedStyle(basketball).getPropertyValue("top"));
         let bombLeft = parseInt(window.getComputedStyle(bomb).getPropertyValue("left"));
         let bombTop = parseInt(window.getComputedStyle(bomb).getPropertyValue("top"));
+        // let lives = 3
         
-        if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490){
-            basketball.style.animation = "none";
-            bomb.style.animation = "none";
-            scoreDisplay.innerHTML = 0
-            document.getElementById("modal").classList.remove("hidden")
+        if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490 ){
+            // document.getElementById("modal").classList.remove("hidden");
+            // basketball.style.animation = "none";
+            // bomb.style.animation = "none";
+            lives--;
+            livesDisplay.innerHTML = lives
+            if (lives < 1){
+                document.getElementById("modal").classList.remove("hidden");
+                basketball.style.animation = "none";
+                bomb.style.animation = "none";
+                scoreDisplay.innerHTML = 0;
+                lives = 3
+                livesDisplay.innerHTML = 3;
+                 cancelAnimationFrame(start);
+            }
+        } else if (characterLeft==blockLeft && blockTop<700 && blockTop>590 ) {
+              score++;
+                swishSound();
         }
-    },1);
+        
+        // if((characterLeft!==blockLeft && blockTop<700 || characterLeft===bombLeft && bombTop<600 && bombTop>490) && (lives > 1)){
+        //     lives--;
+        //     livesDisplay.innerHTML = lives
+        // }else if ((characterLeft!==blockLeft && blockTop<700 && blockTop>590 || characterLeft===bombLeft && bombTop<600 && bombTop>490) && (lives === 1)) {
+        //     basketball.style.animation = "none";
+        //     bomb.style.animation = "none";
+        //     // bomb.style.left = "105px";
+        //     scoreDisplay.innerHTML = 0;
+        //     document.getElementById("modal").classList.remove("hidden");
+            // lives = 3;
+        // if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490){
+        //     // basketball.style.animation = "none";
+        //     // bomb.style.animation = "none";
+        //     // scoreDisplay.innerHTML = 0
+        //     // document.getElementById("modal").classList.remove("hidden")
+        //     lives--;
+        //     livesDisplay.innerHTML = lives
+        // } else if (lives === 0) {
+        //     basketball.style.animation = "none";
+        //     bomb.style.animation = "none";
+        //     scoreDisplay.innerHTML = 0
+        //     document.getElementById("modal").classList.remove("hidden")
+        //     livesDisplay.innerHTML = 3;
+        // }
+        
+    // },500);
 }
+//  function init(){
+//         setInterval(collision,50)
+//    }
 
 function resetGame(){
    score = 0
@@ -166,10 +212,8 @@ function resetGame(){
       if(event.key==="ArrowRight"){moveRight();}
     });
     
-    // let score = 0;
     function moveLeft(){
         let left = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
-        // left -= 100;
         if(left>=0){
             basket.style.left = left + "px";
         }
@@ -184,55 +228,51 @@ function resetGame(){
      let randomBasketball1;
     basketball.addEventListener('animationiteration', () => {
         randomBasketball1 = Math.floor(Math.random() * 8);
-        left = random1 * 100;
+        left = randomBasketball1 * 100;
         basketball.style.left = left + "px";
-        
     });
 
       bomb.addEventListener('animationiteration', () => {
         let resetRandomBomb1 = Math.floor(Math.random() * 8);
-        resetbombleft = resetRandomBomb1 * 100;
-        if (resetRandomBomb1 === random1 && resetRandomBomb1 === 1){
+        if (resetRandomBomb1 === randomBasketball1 && resetRandomBomb1 === 1){
             resetbombleft = (resetRandomBomb1 * 100) + 100;
-        } else if (resetRandomBomb1 === random1 && resetRandomBomb1 <= 8){
+             bomb.style.left = resetbombleft + "px";
+        } else if (resetRandomBomb1 === randomBasketball1 && resetRandomBomb1 <= 8){
             resetbombleft = (resetRandomBomb1 * 100) - 100
+             bomb.style.left = resetbombleft + "px";
         } else {
+            resetbombleft = resetRandomBomb1 * 100;
             bomb.style.left = resetbombleft + "px";
         }
     });
+
+     requestAnimationFrame(collision)
     
-    setInterval(function(){
-        let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
-        let blockLeft = parseInt(window.getComputedStyle(basketball).getPropertyValue("left"));
-        let blockTop = parseInt(window.getComputedStyle(basketball).getPropertyValue("top"));
-        let bombLeft = parseInt(window.getComputedStyle(bomb).getPropertyValue("left"));
-        let bombTop = parseInt(window.getComputedStyle(bomb).getPropertyValue("top"));
-        if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490 ){
-            document.getElementById("modal").classList.remove("hidden");
-            basketball.style.animation = "none";
-            bomb.style.animation = "none";
-        }
-    },1);
+    // setInterval(function(){
+    //     let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
+    //     let blockLeft = parseInt(window.getComputedStyle(basketball).getPropertyValue("left"));
+    //     let blockTop = parseInt(window.getComputedStyle(basketball).getPropertyValue("top"));
+    //     let bombLeft = parseInt(window.getComputedStyle(bomb).getPropertyValue("left"));
+    //     let bombTop = parseInt(window.getComputedStyle(bomb).getPropertyValue("top"));
+    //     if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490){
+    //         lives--;
+    //         // livesDisplay.innerHTML = lives;
+    //     }
+    //         // document.getElementById("modal").classList.remove("hidden");
+    //         // basketball.style.animation = "none";
+    //         // bomb.style.animation = "none";
+    //         // scoreDisplay.innerHTML = 0;
+    //         // lives = 3;
+    //         // livesDisplay.innerHTML = 3;
+    //     // }
+    // },1);
 
 }
 
-function firstBombEasy(){
-    bomb.style.animation = "slide 2s infinite linear";
-}
-
-function firstBombMedium(){
-    bomb.style.animation = "slide 2s infinite linear";
-}
-
-function firstBombHard(){
-    bomb.style.animation = "slide 1.5s infinite linear";
-}
 const gameMusic = new Audio ("./assets/rumble.mov");
 let soundOn = true;
 
 sound.addEventListener("click", () => {
-    // soundOn === true ? soundOn = false : soundOn = true;
-
     if (soundOn === true) {
         soundOn = false;
         stopMusic();
@@ -263,12 +303,6 @@ function swishSound() {
     madeBasket.play();
 }
 
-// function bombSound() {
-//     const gameOver =  new Audio("./assets/bomb.mov");
-//     if (soundOn === false) gameOver.muted = true;
-//         gameOver.volume = .40;
-//         gameOver.play();
-// }
 
 /******/ })()
 ;

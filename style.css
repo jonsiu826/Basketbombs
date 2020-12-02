@@ -160,7 +160,8 @@ table {
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 17px;
-  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 55px;
 } 
 
 #basket{
@@ -216,9 +217,26 @@ table {
 
 #linkedin-logo{
   height: 70px;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
+#angellist-logo{
+   height: 75px;
+  /* margin-left: 5px; */
+}
+#intro-angellist-logo{
+  height: 75px;
+  margin-left: -4px;
+}
+
+#intro-linkedin-logo{
+  height: 75px;
+}
+
+#intro-github-logo{
+  height: 75px;
+  margin-right: 8px;
+}
 
 #instructions-panel{
   /* display: flex; */
@@ -227,20 +245,22 @@ table {
   min-width: 365px;
   max-width: 365px;
   box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  font-family: 'Press Start 2P', cursive;
 }
 
 #left-key{
     height: 70px;
-    float: right;
-    padding-left: -5px;
+    /* float: right; */
+    margin-right: 32px;
+    /* padding-left: -5px; */
 }
 
 #right-key{
-     height: 70px;
-     float: right;
-     padding-left: 15px;
-     padding-bottom: 20px;
-     padding-right: 30px;
+    height: 70px;
+    float: right;
+    padding-left: 15px;
+    padding-bottom: 14px;
+    padding-right: 30px;
 }
 
 #instructions{
@@ -277,12 +297,17 @@ table {
 }
 
 #left-text{
+  font-size: 12px;
   padding: 30px 43px 0px 60px;
+  line-height: 17px;
+  margin-top: -7px;
   /* font-family: 'Press Start 2P', cursive; */
 }
 
 #right-text{
   padding: 20px 30px 0px 60px;
+  line-height: 17px;
+  font-size: 12px;
   /* font-family: 'Press Start 2P', cursive; */
 }
 
@@ -326,6 +351,18 @@ table {
 #high-score-title{
   font-size: 15px;
   padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#lives-title{
+    font-size: 15px;
+  padding-bottom: 5px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#lives{
+    display: flex;
+  justify-content: center;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -409,7 +446,7 @@ html{
 }  */
 
 #intro-links{
-  padding: 10px;
+  padding: 5px;
 }
 
 #start-buttons{

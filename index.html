@@ -1,95 +1,112 @@
 <html>
-    <head>
-        <link rel='icon' href='assets/basketball-image.png' type='image/x-icon' />
-        <title>Basketbombs</title>
-        <h1 id="title"> BasketBomb</h1>
-        <link rel="stylesheet" href="./style.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="gameview">
-       
-            <div id="introduction">
-                <div id="introduction-content">
-                    <h1 id="intro-title">Welcome to BasketBomb</h1>
-                    <div id="game-description"> Basketballs are falling from the sky! Be sure to catch all the basketballs in your basket without letting
-                        them hit the ground. Beware of the bombs! If a basketball falls to the ground or if a bomb touches your basket, you lose! Use your left and right keys to move your basket. When ready, start the game by selecting your difficulty of choice.
-                    </div>
-                    <div class='start-buttons'>
-                        <p>Choose Your Difficulty</p>
-                        <div>
-                            <button id='easy'>EASY</button>
-                            <button id='medium'>MEDIUM</button>
-                            <button id='hard'>HARD</button>
-                        </div>
-                    </div>
-                    <div id="intro-links">
-                        <a id="github" href="https://github.com/jonsiu826" target="_blank">
-                            <img id="github-logo" src="./assets/GitHub-Mark-64px.png" alt="github-icon">
-                        </a>
-                        <a id="linkedin" href="https://www.linkedin.com/in/jonathansiu826/" target="_blank">
-                            <img id="linkedin-logo" src="./assets/linkedin.png" alt="linkedin-icon">
-                        </a>
+
+<head>
+    <link rel='icon' href='assets/basketball-image.png' type='image/x-icon' />
+    <title>Basketbombs</title>
+    <h1 id="title"> BasketBomb</h1>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="gameview">
+
+        <div id="introduction">
+            <div id="introduction-content">
+                <h1 id="intro-title">Welcome to BasketBomb</h1>
+                <div id="game-description"> Basketballs are falling from the sky! Be sure to catch all the basketballs
+                    in your basket without letting
+                    them hit the ground. Beware of the bombs! If a basketball falls to the ground or if a bomb touches
+                    your basket, you lose! Use your left and right keys to move your basket. When ready, start the game
+                    by selecting your difficulty of choice.
+                </div>
+                <div class='start-buttons'>
+                    <p>Choose Your Difficulty</p>
+                    <div>
+                        <button id='easy'>EASY</button>
+                        <button id='medium'>MEDIUM</button>
+                        <button id='hard'>HARD</button>
                     </div>
                 </div>
-            </div>
-                    <div id="modal" class="hidden">
-                        <div id="modal-content" >
-                            <div id="modal-container">
-                                <div id="game-over">
-                                    <h1 id="game-over"> Game Over</h1>
-                                </div>
-                                <div id='reset-buttons'>
-                                    <p>Choose Your Difficulty</p>
-                                    <div>
-                                        <button id='easy1'>EASY</button>
-                                        <button id='medium1'>MEDIUM</button>
-                                        <button id='hard1'>HARD</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <div id="game">
-                <div id="basketball"></div>
-                <div id="bomb"></div>
-                <div id="basket"></div>
-            </div>
-            <div id="right-panel">
-                <div id="score-wrapper">
-                    <div id="score-container">
-                        <h3 id="score-title">Score</h3>
-                        <div id="score">0</div>
-                    </div>
-                    <div div="high-score-container">
-                        <h3 id="high-score-title">High Score</h3>
-                        <span id="high-score">0</span>
-                    </div>
-                </div>
-                <div id="links">
+                <div id="intro-links">
                     <a id="github" href="https://github.com/jonsiu826" target="_blank">
-                        <img id="github-logo" src="./assets/GitHub-Mark-64px.png" alt="github-icon">
+                        <img id="intro-github-logo" src="./assets/GitHub-Mark-64px.png" alt="github-icon">
                     </a>
                     <a id="linkedin" href="https://www.linkedin.com/in/jonathansiu826/" target="_blank">
-                        <img id="linkedin-logo" src="./assets/linkedin.png" alt="linkedin-icon">
+                        <img id="intro-linkedin-logo" src="./assets/linkedin.png" alt="linkedin-icon">
+                    </a>
+                    <a id="angellist" href="https://angel.co/jonathan-siu-2" target="_blank">
+                        <img id="intro-angellist-logo" src="./assets/angelist.png" alt="angellist-icon">
                     </a>
                 </div>
-                <button id="sound-settings">PAUSE MUSIC</button>
-                <div id="instructions-panel">
-                    <p id="instructions">Instructions</p>
-                    <div id="left-key-container">
-                        <p id="left-text"> Use left key to move left</p>
-                        <img id="left-key" src="./assets/kisspng-arrow-computer-icons-encapsulated-postscript-left-arrow-5ac396815db8c2.2997985015227674893839.png">
+            </div>
+        </div>
+        <div id="modal" class="hidden">
+            <div id="modal-content">
+                <div id="modal-container">
+                    <div id="game-over">
+                        <h1 id="game-over"> Game Over</h1>
                     </div>
-                    <div id="right-key-container">
-                        <p id="right-text">Use right key to move right</p>
-                        <img id="right-key" src="./assets/right-arrow.png">
+                    <div id='reset-buttons'>
+                        <p id=difficulty>Choose Your Difficulty</p>
+                        <div>
+                            <button id='easy1'>EASY</button>
+                            <button id='medium1'>MEDIUM</button>
+                            <button id='hard1'>HARD</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="game">
+            <div id="basketball"></div>
+            <div id="bomb"></div>
+            <div id="basket"></div>
+        </div>
+        <div id="right-panel">
+            <div id="score-wrapper">
+                <div id="score-container">
+                    <h3 id="score-title">Score</h3>
+                    <div id="score">0</div>
+                </div>
+                <div div="high-score-container">
+                    <h3 id="high-score-title">High Score</h3>
+                    <span id="high-score">0</span>
+                </div>
+                <div div="lives-container">
+                    <h3 id="lives-title">Lives</h3>
+                    <span id="lives">3</span>
+                </div>
+            </div>
+            <div id="links">
+                <a id="github" href="https://github.com/jonsiu826" target="_blank">
+                    <img id="github-logo" src="./assets/GitHub-Mark-64px.png" alt="github-icon">
+                </a>
+                <a id="linkedin" href="https://www.linkedin.com/in/jonathansiu826/" target="_blank">
+                    <img id="linkedin-logo" src="./assets/linkedin.png" alt="linkedin-icon">
+                </a>
+                <a id="angellist" href="https://angel.co/jonathan-siu-2" target="_blank">
+                    <img id="angellist-logo" src="./assets/angelist.png" alt="angellist-icon">
+                </a>
+            </div>
+            <button id="sound-settings">PAUSE MUSIC</button>
+            <div id="instructions-panel">
+                <p id="instructions">Instructions</p>
+                <div id="left-key-container">
+                    <p id="left-text"> Use left key to move left</p>
+                    <img id="left-key"
+                        src="./assets/kisspng-arrow-computer-icons-encapsulated-postscript-left-arrow-5ac396815db8c2.2997985015227674893839.png">
+                </div>
+                <div id="right-key-container">
+                    <p id="right-text">Use right key to move right</p>
+                    <img id="right-key" src="./assets/right-arrow.png">
+                </div>
+            </div>
+        </div>
         <script src="./dist/bundle.js"></script>
-    </body>
+</body>
+
 </html>
