@@ -132,7 +132,7 @@ function startGame(){
         if (randomBasketball == randomBomb && randomBomb == 1){
             resetbombleft = (randomBomb * 100) + 100;
             bomb.style.left = resetbombleft + "px";
-        } else if (randomBomb == randomBasketball1 && randomBomb <= 8){
+        } else if (randomBomb == randomBasketball && randomBomb <= 8){
             resetbombleft = (randomBomb * 100) - 100
             bomb.style.left = resetbombleft + "px";
         } else {

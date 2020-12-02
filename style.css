@@ -160,8 +160,9 @@ table {
   align-items: center;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 17px;
-  margin-top: 20px;
-  margin-left: 55px;
+    margin-top: 13px;
+    margin-bottom: 7px;
+    margin-left: 55px;
 } 
 
 #basket{
