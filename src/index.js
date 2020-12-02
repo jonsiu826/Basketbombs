@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-         bomb.style.animation = "slide 1.8s infinite linear";
-        basketball.style.animation = "basketballslide 1.8s infinite linear"
+         bomb.style.animation = "slide 1.5s infinite linear";
+        basketball.style.animation = "basketballslide 1.5s infinite linear"
     })
 
      hard.addEventListener("click", () => {
@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
        medium1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.8s infinite linear";
-        basketball.style.animation = "basketballslide 1.8s infinite linear"
+        bomb.style.animation = "slide 1.5s infinite linear";
+        basketball.style.animation = "basketballslide 1.5s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
