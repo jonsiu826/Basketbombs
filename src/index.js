@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backgroundMusic()
         bomb.style.animation = "slide 1.6s infinite linear"
         basketball.style.animation = "basketballslide 1.3s infinite linear"
-         basketball2.style.animation = "basketballslide 1.3s infinite linear"
+        // basketball2.style.animation = "basketballslide 1.3s infinite linear"
     })
 
      medium.addEventListener("click", () => {
