@@ -184,14 +184,25 @@ table {
     position: relative;
 }
 
-#bomb{
-    width: 80px;
-    height: 80px;
+#basketball2{
+    width: 100px;
+    height: 100px;
     top: 600px;
-    background-color: wheat;
-    content: url("assets/hiclipart.com.png");
+    /* background-color: orangered; */
+    content: url("assets/basketball-image.png");
+    border-radius: 65px;
     position: relative;
-    animation: slide 2s infinite linear;
+    display: inline-block;
+}
+
+#bomb{
+    width: 90px;
+    height: 90px;
+    top: 600px;
+    /* background-color: wheat; */
+    content: url("assets/bomb.png");
+    position: relative;
+    /* animation: slide 2s infinite linear; */
     left: 105px;
 }
 

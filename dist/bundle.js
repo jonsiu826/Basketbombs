@@ -8,6 +8,7 @@ let scoreDisplay = document.getElementById('score');
 let livesDisplay = document.getElementById('lives');
 const highscoreDisplay = document.getElementById('high-score');
 let basketball = document.getElementById("basketball");
+let basketball2 = document.getElementById("basketball2");
 let basket = document.getElementById("basket");
 let bomb = document.getElementById("bomb");
 const sound = document.getElementById("sound-settings");
@@ -50,47 +51,48 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-        bomb.style.animation = "slide 2s infinite linear"
-        basketball.style.animation = "basketballslide 2s infinite linear"
+        bomb.style.animation = "slide 1.6s infinite linear"
+        basketball.style.animation = "basketballslide 1.3s infinite linear"
+         basketball2.style.animation = "basketballslide 1.3s infinite linear"
     })
 
      medium.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-         bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1.5s infinite linear"
+         bomb.style.animation = "slide 1s infinite linear";
+        basketball.style.animation = "basketballslide 1.2s infinite linear"
     })
 
      hard.addEventListener("click", () => {
         document.getElementById("introduction").classList.add("hidden");
         startGame();
         backgroundMusic()
-         bomb.style.animation = "slide 1.2s infinite linear";
-        basketball.style.animation = "basketballslide 1.2s infinite linear"
+         bomb.style.animation = "slide 0.7s infinite linear";
+        basketball.style.animation = "basketballslide 1.1s infinite linear"
     })
 
       easy1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 2s infinite linear";
-       basketball.style.animation = "basketballslide 2s infinite linear"
+        bomb.style.animation = "slide 1.6s infinite linear";
+       basketball.style.animation = "basketballslide 1.3s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
        medium1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.5s infinite linear";
-        basketball.style.animation = "basketballslide 1.5s infinite linear"
+        bomb.style.animation = "slide 1.2s infinite linear";
+        basketball.style.animation = "basketballslide 1.2s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
        hard1.addEventListener("click", () => { 
        resetGame();
        backgroundMusic()
-        bomb.style.animation = "slide 1.2s infinite linear";
-        basketball.style.animation = "basketballslide 1.2s infinite linear"
+        bomb.style.animation = "slide 0.7s infinite linear";
+        basketball.style.animation = "basketballslide 1.1s infinite linear"
        document.getElementById("modal").classList.add("hidden");
   })
 
@@ -121,10 +123,13 @@ function startGame(){
         randomBasketball = Math.floor(Math.random() * 8);
         left = randomBasketball * 100;
         basketball.style.left = left + "px";
-      
-        scoreDisplay.innerHTML = score
-        if (score > highScore) highScore = score;
-        highscoreDisplay.innerHTML = highScore;
+    });
+
+    let secondrandomBasketball;
+    basketball.addEventListener('animationiteration', () => {
+        secondrandomBasketball = Math.floor(Math.random() * 8);
+        secondleft = secondrandomBasketball * 100;
+        basketball.style.left = secondleft + "px";
     });
 
      bomb.addEventListener('animationiteration', () => {
@@ -164,46 +169,22 @@ function startGame(){
                 document.getElementById("modal").classList.remove("hidden");
                 basketball.style.animation = "none";
                 bomb.style.animation = "none";
+                basketball2.style.animation = "none"
                 scoreDisplay.innerHTML = 0;
                 lives = 3
                 livesDisplay.innerHTML = 3;
                  cancelAnimationFrame(start);
             }
         } else if (characterLeft==blockLeft && blockTop<700 && blockTop>590 ) {
-              score++;
+                score++;
                 swishSound();
+                scoreDisplay.innerHTML = score
+                if (score > highScore) highScore = score;
+                highscoreDisplay.innerHTML = highScore;
         }
-        
-        // if((characterLeft!==blockLeft && blockTop<700 || characterLeft===bombLeft && bombTop<600 && bombTop>490) && (lives > 1)){
-        //     lives--;
-        //     livesDisplay.innerHTML = lives
-        // }else if ((characterLeft!==blockLeft && blockTop<700 && blockTop>590 || characterLeft===bombLeft && bombTop<600 && bombTop>490) && (lives === 1)) {
-        //     basketball.style.animation = "none";
-        //     bomb.style.animation = "none";
-        //     // bomb.style.left = "105px";
-        //     scoreDisplay.innerHTML = 0;
-        //     document.getElementById("modal").classList.remove("hidden");
-            // lives = 3;
-        // if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490){
-        //     // basketball.style.animation = "none";
-        //     // bomb.style.animation = "none";
-        //     // scoreDisplay.innerHTML = 0
-        //     // document.getElementById("modal").classList.remove("hidden")
-        //     lives--;
-        //     livesDisplay.innerHTML = lives
-        // } else if (lives === 0) {
-        //     basketball.style.animation = "none";
-        //     bomb.style.animation = "none";
-        //     scoreDisplay.innerHTML = 0
-        //     document.getElementById("modal").classList.remove("hidden")
-        //     livesDisplay.innerHTML = 3;
-        // }
-        
-    // },500);
 }
-//  function init(){
-//         setInterval(collision,50)
-//    }
+
+
 
 function resetGame(){
    score = 0
@@ -226,7 +207,7 @@ function resetGame(){
         }
     }
      let randomBasketball1;
-    basketball.addEventListener('animationiteration', () => {
+        basketball.addEventListener('animationiteration', () => {
         randomBasketball1 = Math.floor(Math.random() * 8);
         left = randomBasketball1 * 100;
         basketball.style.left = left + "px";
@@ -245,28 +226,7 @@ function resetGame(){
             bomb.style.left = resetbombleft + "px";
         }
     });
-
      requestAnimationFrame(collision)
-    
-    // setInterval(function(){
-    //     let characterLeft = parseInt(window.getComputedStyle(basket).getPropertyValue("left"));
-    //     let blockLeft = parseInt(window.getComputedStyle(basketball).getPropertyValue("left"));
-    //     let blockTop = parseInt(window.getComputedStyle(basketball).getPropertyValue("top"));
-    //     let bombLeft = parseInt(window.getComputedStyle(bomb).getPropertyValue("left"));
-    //     let bombTop = parseInt(window.getComputedStyle(bomb).getPropertyValue("top"));
-    //     if(characterLeft!=blockLeft && blockTop<700 && blockTop>590 || characterLeft==bombLeft && bombTop<600 && bombTop>490){
-    //         lives--;
-    //         // livesDisplay.innerHTML = lives;
-    //     }
-    //         // document.getElementById("modal").classList.remove("hidden");
-    //         // basketball.style.animation = "none";
-    //         // bomb.style.animation = "none";
-    //         // scoreDisplay.innerHTML = 0;
-    //         // lives = 3;
-    //         // livesDisplay.innerHTML = 3;
-    //     // }
-    // },1);
-
 }
 
 const gameMusic = new Audio ("./assets/rumble.mov");
